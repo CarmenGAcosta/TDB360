@@ -1,0 +1,846 @@
+/* Estilos para el cuerpo */
+body {
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Título de la página */
+#page-title {
+    font-size: 2rem;
+    color: #ddd;
+    margin: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+/* Estilos para el navbar */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    z-index: 10;
+    padding: 20px 0; /* Padding por defecto */
+    text-align: center;
+    transition: padding 0.5s ease, background-color 0.5s ease; /* Suavizar transición */
+    box-sizing: border-box; /* Evitar que el padding afecte el espacio */
+}
+
+/* Navbar reducido */
+.shrink-navbar {
+    padding: 12px 0; /* Padding reducido */
+    background-color: #222; /* Fondo un poco más oscuro cuando se reduce */
+}
+
+/* Título oculto al hacer scroll */
+.hidden-title {
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Suavizar la desaparición del título */
+}
+
+/* Enlaces del navbar */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    transition: margin-top 0.5s ease; /* Suavizar la transición de los enlaces */
+}
+
+nav ul li {
+    margin: 0 15px;
+    transition: margin 0.5s ease; /* Suavizar los márgenes de los enlaces */
+}
+
+nav ul li a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.5s ease, font-size 0.5s ease; /* Transición suave para enlaces */
+}
+
+nav ul li a:hover {
+    color: #fff; /* Resalta al pasar el cursor */
+    font-size: 18px;
+}
+
+/* Transición para la imagen del logo cuando se reduce el navbar */
+#header-image {
+    display: none;
+}
+
+/* Mostrar la imagen cuando el navbar se reduce */
+.shrink-navbar #header-image {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s ease; /* Suaviza la aparición de la imagen */
+}
+
+/* Asegura una transición suave en los enlaces al pasar el cursor */
+nav ul li a:focus {
+    outline: none;
+}
+
+/* Estilos para la sección sobre nosotros */
+#sobre-nosotros {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+/* Estilo para el h2 */
+#sobre-nosotros h2 {
+    font-size: 3rem; /* Aumentar el tamaño de la fuente */
+    color: #0018A5; /* Color del texto */
+    margin-bottom: 20px; /* Espaciado debajo del título */
+}
+
+/* Justificación del texto del párrafo */
+#sobre-nosotros p {
+    font-size: 1.2rem;
+    color: #333;
+    text-align: justify; /* Justificar el texto */
+    line-height: 1.6; /* Mejora la legibilidad */
+    margin: 0 auto;
+    max-width: 800px; /* Limita el ancho máximo del texto */
+}
+
+/* Estilos para la imagen dinámica debajo del texto */
+#sobre-nosotros img {
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* Limita la altura máxima de la imagen */
+    object-fit: cover; /* Hace que la imagen ocupe el contenedor sin distorsionarse */
+    margin-top: 20px; /* Espaciado entre el texto y la imagen */
+    transition: transform 0.5s ease; /* Animación de transición */
+}
+
+/* Estilo dinámico: escalado de la imagen al cargar la página */
+#sobre-nosotros img:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Respuesta para pantallas más pequeñas */
+@media (max-width: 768px) {
+    #sobre-nosotros {
+        padding: 40px 10px;
+    }
+
+    #sobre-nosotros h2 {
+        font-size: 2.5rem; /* Ajuste de tamaño para pantallas pequeñas */
+    }
+
+    #sobre-nosotros p {
+        font-size: 1rem; /* Ajuste de tamaño para pantallas pequeñas */
+    }
+}
+
+/* Carousel */
+/* Contenedor principal del carrusel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para cada slide */
+.carousel-slide {
+    display: none;
+    text-align: center;
+}
+
+.carousel-slide.active {
+    display: block;
+    animation: fade-in 0.5s ease;
+}
+
+/* Imagen dentro del slide */
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Botones del carrusel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+/* Animación para las transiciones */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    z-index: 10;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#page-title {
+    font-size: 2rem;
+    color: #ddd;
+    margin: 0;
+    transition: opacity 0.3s ease, font-size 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#servicios {
+    padding: 60px 20px;
+    background-color: #F3F3F3;
+    text-align: center;
+}
+
+.servicios-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.servicio-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.servicio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.social-icon i {
+    font-size: 30px; /* Ajusta el tamaño del ícono */
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+/* Estilos para la sección de servicios */
+#servicios {
+    padding: 60px 20px;
+    background-color: #F3F3F3;
+    text-align: center;
+}
+
+#servicios h2 {
+    font-size: 2.5rem;
+    color: #0018A5;
+    margin-bottom: 40px;
+}
+
+/* Contenedor de los servicios en cuadrícula */
+.servicios-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos para cada cuadro de servicio */
+.servicio-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Título del servicio */
+.servicio-titulo h3 {
+    font-size: 1.8rem;
+    color: #0018A5;
+    margin: 0;
+}
+
+/* Descripción oculta del servicio */
+.servicio-descripcion {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    color: #333333;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Mostrar la descripción al pasar el cursor */
+.servicio-item:hover .servicio-descripcion {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsividad: Adaptar a pantallas más pequeñas */
+@media (max-width: 768px) {
+    .servicios-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .servicios-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #333; /* Fondo igual al navbar */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left {
+    flex: 1;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.footer-right {
+    flex: 1;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.social-icon {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.social-icon:hover i {
+    transform: scale(1.1); /* Efecto de hover */
+}
+/* Estilos para la sección de consultoría estratégica */
+#consultoria-estrategica {
+    font-family: 'Lexend', sans-serif;
+    background-color: #f9f9f9; /* Fondo neutro */
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título principal */
+#consultoria-estrategica h2 {
+    font-size: 2.5rem;
+    color: #0018A5;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Descripción del servicio */
+.descripcion-servicio {
+    font-size: 1.2rem;
+    color: #333333;
+    line-height: 1.6;
+    text-align: justify; /* Texto justificado */
+    margin-bottom: 20px;
+}
+
+/* Subtítulos */
+#consultoria-estrategica h3 {
+    font-size: 1.8rem;
+    color: #0018A5;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Listados de objetivos y estrategias */
+#consultoria-estrategica ul {
+    list-style: disc inside; /* Icono de viñeta interna */
+    color: #555555;
+    margin: 0 0 20px 20px;
+    padding: 0;
+}
+
+#consultoria-estrategica ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify; /* Texto justificado */
+}
+/* Estilos para la sección de marketing digital */
+#marketing-digital {
+    font-family: 'Lexend', sans-serif;
+    background-color: #f9f9f9; /* Fondo neutro */
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título principal */
+#marketing-digital h2 {
+    font-size: 2.5rem;
+    color: #0018A5;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Descripción del servicio */
+.descripcion-servicio {
+    font-size: 1.2rem;
+    color: #333333;
+    line-height: 1.6;
+    text-align: justify; /* Texto justificado */
+    margin-bottom: 20px;
+}
+
+/* Subtítulos */
+#marketing-digital h3 {
+    font-size: 1.8rem;
+    color: #0018A5;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Listados de objetivos y estrategias */
+#marketing-digital ul {
+    list-style: disc inside; /* Icono de viñeta interna */
+    color: #555555;
+    margin: 0 0 20px 20px;
+    padding: 0;
+}
+
+#marketing-digital ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify; /* Texto justificado */
+}
+/* Estilos para la sección de desarrollo web */
+#desarrollo-web {
+    font-family: 'Lexend', sans-serif;
+    background-color: #f4f4f4; /* Fondo claro y limpio */
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título principal */
+#desarrollo-web h2 {
+    font-size: 2.5rem;
+    color: #0018A5;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Descripción del servicio */
+.descripcion-servicio {
+    font-size: 1.2rem;
+    color: #333333;
+    line-height: 1.6;
+    text-align: justify; /* Texto justificado */
+    margin-bottom: 20px;
+}
+
+/* Subtítulos */
+#desarrollo-web h3 {
+    font-size: 1.8rem;
+    color: #0018A5;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Listados de objetivos y estrategias */
+#desarrollo-web ul {
+    list-style: disc inside;
+    color: #555555;
+    margin: 0 0 20px 20px;
+    padding: 0;
+}
+
+#desarrollo-web ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+/* Estilos para la sección de SEO y SEM */
+#seo-sem {
+    font-family: 'Lexend', sans-serif;
+    background-color: #ffffff; /* Fondo limpio y minimalista */
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título principal */
+#seo-sem h2 {
+    font-size: 2.5rem;
+    color: #0018A5; /* Azul para reflejar confianza y profesionalismo */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Descripción del servicio */
+.descripcion-servicio {
+    font-size: 1.2rem;
+    color: #444444;
+    line-height: 1.6;
+    text-align: justify; /* Texto justificado */
+    margin-bottom: 20px;
+}
+
+/* Subtítulos */
+#seo-sem h3 {
+    font-size: 1.8rem;
+    color: #0018A5;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Listados de objetivos y estrategias */
+#seo-sem ul {
+    list-style: square inside; /* Viñetas con estilo profesional */
+    color: #555555;
+    margin: 0 0 20px 20px;
+    padding: 0;
+}
+
+#seo-sem ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+/* Estilos para la sección de Gestión de Redes Sociales */
+#gestion-redes-sociales {
+    font-family: 'Lexend', sans-serif;
+    background-color: #F3F4F6; /* Fondo claro para transmitir frescura y profesionalismo */
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título principal */
+#gestion-redes-sociales h2 {
+    font-size: 2.5rem;
+    color: #0018A5; /* Azul vibrante que transmite confianza y dinamismo */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Descripción del servicio */
+.descripcion-servicio {
+    font-size: 1.2rem;
+    color: #444444;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Subtítulos */
+#gestion-redes-sociales h3 {
+    font-size: 1.8rem;
+    color: #0018A5;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Listados de objetivos y estrategias */
+#gestion-redes-sociales ul {
+    list-style: square inside;
+    color: #555555;
+    margin: 0 0 20px 20px;
+    padding: 0;
+}
+
+#gestion-redes-sociales ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+/* Estilos para la sección de Creación de Contenido */
+#creacion-contenido {
+    font-family: 'Lexend', sans-serif;
+    background-color: #FAFAFC; /* Fondo claro que transmite frescura y profesionalismo */
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Título principal */
+#creacion-contenido h2 {
+    font-size: 2.5rem;
+    color: #0018A5; /* Coral vibrante que comunica creatividad y energía */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Descripción del servicio */
+.descripcion-servicio {
+    font-size: 1.2rem;
+    color: #444444;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Subtítulos */
+#creacion-contenido h3 {
+    font-size: 1.8rem;
+    color: #0018A5;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Listados de objetivos y estrategias */
+#creacion-contenido ul {
+    list-style: disc inside;
+    color: #555555;
+    margin: 0 0 20px 20px;
+    padding: 0;
+}
+
+#creacion-contenido ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+
+/* Estilos para el título de la sección Casos de Éxito */
+#casos-exito h2 {
+    font-size: 32px;
+    color: #0018A5;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Estilo para el párrafo introductorio */
+#casos-exito p {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Contenedor de testimonios */
+.testimonials {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Estilo para cada cuadro de testimonio */
+.testimonial {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efecto de hover en el testimonio */
+.testimonial:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para la imagen circular */
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+}
+
+/* Imagen dentro del círculo */
+.testimonial-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo para el contenido del testimonio */
+.testimonial-content p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+/* Nombre del cliente */
+.testimonial-content h4 {
+    font-size: 18px;
+    color: #0018A5;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .testimonials {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial {
+        width: 80%;
+    }
+}
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto; /* Centra el formulario */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  form input,
+  form textarea,
+  form button {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: inherit;
+  }
+  
+  form input:focus,
+  form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+  }
+  
+  form textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  form button {
+    background-color: #0018A5;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #0056b3;
+  }
+  
+  form button:active {
+    background-color: #003f88;
+  }
+  
