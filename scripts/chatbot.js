@@ -28,8 +28,33 @@ document.addEventListener("DOMContentLoaded", function () {
         { keywords: ["rapidez", "eficiencia"], response: "Nos especializamos en ofrecer resultados rápidos y de alta calidad." },
         { keywords: ["portafolio"], response: "Revisa nuestros casos de éxito en esta página para más información." },
         { keywords: ["crecimiento", "negocio"], response: "Nos enfocamos en estrategias para hacer crecer tu negocio de manera sostenible." },
-        { keywords: ["personalizado"], response: "Adaptamos nuestros servicios para cumplir tus necesidades específicas." }
-    ];
+        { keywords: ["personalizado"], response: "Adaptamos nuestros servicios para cumplir tus necesidades específicas." },
+            // Preguntas y respuestas existentes
+            { keywords: ["servicio", "servicios"], response: "Ofrecemos servicios de marketing 360, diseño gráfico, y consultoría." },
+            { keywords: ["costos", "precios", "cotizar", "cotización"], response: "Nuestros costos varían según el servicio. Contáctanos para más detalles." },
+            { keywords: ["facebook", "redes"], response: "Gestionamos cuentas de Facebook, Instagram y otras plataformas." },
+            { keywords: ["diseño"], response: "Brindamos servicios de diseño gráfico para marcas y proyectos." },
+            { keywords: ["consultoría"], response: "Nuestra consultoría en marketing 360 optimiza tus resultados." },
+            { keywords: ["youtube"], response: "Podemos ayudarte a crecer tu canal de YouTube y monetizar contenido." },
+            { keywords: ["engagement", "alcance"], response: "Aumentamos el engagement y el alcance con estrategias personalizadas." },
+            { keywords: ["resultados", "impacto"], response: "Te ayudamos a medir y mejorar tus resultados de marketing." },
+            { keywords: ["seo", "posicionamiento"], response: "Optimizamos tu sitio para mejorar su posicionamiento en buscadores." },
+            { keywords: ["publicidad", "ads"], response: "Creamos campañas efectivas en Google Ads y redes sociales." },
+            // Nuevas preguntas y respuestas
+            { keywords: ["qué es te lo digo bonito", "te lo digo bonito", "quiénes son"], response: "Te lo Digo Bonito es una agencia de marketing digital enfocada en la comunicación efectiva y la creación de soluciones personalizadas para cada cliente." },
+            { keywords: ["misión", "visión", "objetivo"], response: "Nuestra misión es fomentar conexiones auténticas a través del marketing. Nuestra visión es ser líderes en soluciones creativas y efectivas, y nuestro objetivo es ayudarte a crecer de manera orgánica y sostenible." },
+            { keywords: ["valores", "personalidad", "principios"], response: "En Te lo Digo Bonito priorizamos la empatía, igualdad, respeto y comunicación efectiva. Nuestro enfoque se centra en relaciones laborales orgánicas y respetuosas." },
+            { keywords: ["empatía"], response: "Creemos que la empatía es clave para entender las necesidades de nuestros clientes y su audiencia." },
+            { keywords: ["igualdad"], response: "Fomentamos un entorno laboral inclusivo, asegurándonos de que cada voz sea escuchada y valorada." },
+            { keywords: ["respeto"], response: "Valoramos a cada cliente y colaborador, promoviendo un ambiente de respeto mutuo." },
+            { keywords: ["flujo orgánico", "relaciones laborales"], response: "Nos enfocamos en construir relaciones laborales fluidas, basadas en la confianza y la colaboración." },
+            { keywords: ["comunicación efectiva"], response: "Creemos que una comunicación clara y directa es fundamental para el éxito de cualquier proyecto." },
+            { keywords: ["experiencia del cliente", "cliente primero"], response: "Siempre ponemos a nuestros clientes en el centro, asegurándonos de que sus necesidades sean atendidas con excelencia." },
+            { keywords: ["tecnología", "innovación"], response: "Estamos al día con las últimas tecnologías e innovaciones para ofrecerte lo mejor en marketing digital." },
+            { keywords: ["colaboración", "trabajo en equipo"], response: "Fomentamos la colaboración y el trabajo en equipo, tanto dentro como fuera de nuestra agencia." }
+        ];
+    
+
 
     function appendMessage(sender, message) {
         const p = document.createElement("p");
