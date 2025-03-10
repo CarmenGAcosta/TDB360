@@ -932,3 +932,136 @@ form {
 #chat-input button:hover {
     background: #0056b3;
 }
+/* --- Estilos generales (se mantienen tus estilos previos) --- */
+
+/* ... Tus estilos anteriores ... */
+
+/* Estilos para el chatbot */
+
+/* Estado cerrado: solo se muestra la imagen en un círculo */
+#chatbot.closed {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: url('imgs/TDB.vintage.png') no-repeat center center;
+    background-size: cover;
+    border: 2px solid #0018A5;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  /* Cuando se abre, el contenedor se expande */
+  #chatbot.open {
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    background: #f9f9f9;
+    border: 2px solid #0018A5;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  /* La ventana del chat (solo visible en estado abierto) */
+  #chatbot .chat-window {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  /* Mostrar ventana de chat cuando está abierto */
+  #chatbot.open .chat-window {
+    display: flex;
+  }
+  
+  /* Encabezado del chatbot */
+  #chat-header {
+    background: #0018A5;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Botón para cerrar el chat */
+  #chat-close {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Mensajes */
+  #chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #333 #f1f1f1;
+  }
+  
+  /* Mensajes personalizados */
+  .bot-message {
+    background: #e0f7fa;
+    color: #00796b;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 5px 0;
+    max-width: 80%;
+  }
+  
+  .user-message {
+    background: #f1f1f1;
+    color: #333;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 5px 0;
+    max-width: 80%;
+    align-self: flex-end;
+  }
+  
+  /* Entrada del usuario */
+  #chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  #chat-input input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #chat-input button {
+    background: #0018A5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  
+  #chat-input button:hover {
+    background: #0056b3;
+  }
+  
+  /* Responsividad: el chatbot se adapta en móviles */
+  @media (max-width: 480px) {
+    #chatbot.open {
+      width: 90%;
+      height: 70%;
+      right: 5%;
+      bottom: 5%;
+    }
+  }
+  
